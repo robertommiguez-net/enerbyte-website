@@ -17,7 +17,7 @@ export default function Home() {
       <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2">
-            <img src="/manus-storage/enerbyte-logo_c588f5fe.png" alt="Enerbyte" className="h-8 w-8" />
+            <img src="/logo.png" alt="Enerbyte" className="h-8 w-8" />
             <span className="text-xl font-bold text-foreground">Enerbyte</span>
           </div>
           
@@ -94,7 +94,7 @@ export default function Home() {
             <div className="relative hidden md:block">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-lg blur-2xl"></div>
               <img 
-                src="/manus-storage/hero-smart-home_d0fd4972.png" 
+                src="/hero.png" 
                 alt="Smart Home" 
                 className="relative rounded-lg shadow-2xl border border-accent/30 hover:border-accent/60 transition-all duration-300" 
               />
