@@ -31,6 +31,13 @@ export default function Home() {
           </nav>
 
           <div className="flex items-center gap-4">
+            <a
+              href="https://wa.me/543442405219" target="_blank" rel="noopener noreferrer">
+            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2">
+                Solicitar asesoramiento por WhatsApp
+                <ArrowRight className="w-4 h-4" />
+                </Button>
+            </a>
             <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2">
               Solicitar asesoramiento
               <ChevronRight className="w-4 h-4" />
@@ -343,7 +350,8 @@ export default function Home() {
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2 shadow-lg hover:shadow-xl transition-all">
                 Solicitar asesoramiento por WhatsApp
               <ArrowRight className="w-4 h-4" />
-            </Button>
+           
+            </a>
             <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 transition-all">
               Ver soluciones
             </Button>
