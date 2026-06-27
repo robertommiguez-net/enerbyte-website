@@ -373,15 +373,15 @@ export default function Home() {
               <h4 className="font-bold mb-4 text-accent">Contacto</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>📍 Concepción del Uruguay – Entre Ríos</li>
-                <li>📲 WhatsApp: +54 (colocar número)</li>
-                <li>📧 Email: info@enerbyte.com</li>
+                <li>📲 WhatsApp: +54 (3442405219)</li>
+                <li>📧 Email: enerbyte.ar@gmail.com</li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4 text-accent">Redes Sociales</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-accent transition">Instagram @enerbyte.ar</a></li>
-                <li><a href="#" className="hover:text-accent transition">Facebook Enerbyte</a></li>
+                <li><a href="#" className="hover:text-accent transition">Facebook Enerbyte.ar</a></li>
                 <li><a href="#" className="hover:text-accent transition">LinkedIn Enerbyte</a></li>
               </ul>
             </div>
