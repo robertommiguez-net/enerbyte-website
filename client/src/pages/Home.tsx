@@ -343,15 +343,16 @@ export default function Home() {
           <p className="text-lg text-muted-foreground">
             Solicitá una asesoría inicial y descubrí qué soluciones inteligentes podés implementar en tu espacio.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2 shadow-lg hover:shadow-xl transition-all">
              <a
               href="https://wa.me/543442405219" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2 shadow-lg hover:shadow-xl transition-all">
                 Solicitar asesoramiento por WhatsApp
               <ArrowRight className="w-4 h-4" />
-           
+                </Button>
             </a>
+            <a href="#soluciones">      
             <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 transition-all">
               Ver soluciones
             </Button>
