@@ -337,11 +337,11 @@ export default function Home() {
             Solicitá una asesoría inicial y descubrí qué soluciones inteligentes podés implementar en tu espacio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2 shadow-lg hover:shadow-xl transition-all">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2" onClick={() => window.open('https://wa.me/543442405219', "_blank")}>
               Solicitar asesoramiento por WhatsApp
               <ArrowRight className="w-4 h-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 transition-all">
+            <Button size="lg" variant="outline" className="border-accent text-accent" onClick={() => document.getElementById("soluciones")?.scrollIntoView({ behavior: "smooth" })}>
               Ver soluciones
             </Button>
           </div>
