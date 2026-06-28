@@ -91,7 +91,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative hidden md:block">
+            <div className="relative block mt-8 md:mt-0">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-lg blur-2xl"></div>
               <img 
                 src="/images/hero.png" 
