@@ -5,12 +5,68 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Zap, Lock, Leaf, Smartphone, Cog, ArrowRight, Menu, X } from "lucide-react";
+import { ChevronRight, Zap, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, Home, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const storeItems = [
+  {
+    title: "Kit Smart Home Básico",
+    category: "Hogar",
+    icon: Home,
+    description: "Ideal para comenzar a automatizar tu casa de forma simple.",
+    price: "Consultar",
+    benefits: ["Control desde el celular", "Instalación simple", "Escalable"],
+    whatsappText: "Hola, quiero consultar por el Kit Smart Home Básico",
+  },
+  {
+    title: "Kit Ahorro Energético",
+    category: "Ahorro",
+    icon: Zap,
+    description: "Pensado para optimizar el consumo de termotanques y equipos eléctricos.",
+    price: "Consultar",
+    benefits: ["Reduce consumo", "Programación horaria", "Control remoto"],
+    whatsappText: "Hola, quiero consultar por el Kit Ahorro Energético",
+  },
+  {
+    title: "Kit Luces Inteligentes",
+    category: "Iluminación",
+    icon: Lightbulb,
+    description: "Automatizá luces, escenas y rutinas desde tu celular.",
+    price: "Consultar",
+    benefits: ["Escenas smart", "Encendido remoto", "Compatible con rutinas"],
+    whatsappText: "Hola, quiero consultar por el Kit Luces Inteligentes",
+  },
+  {
+    title: "Kit Seguridad",
+    category: "Seguridad",
+    icon: Shield,
+    description: "Sensores, alertas y monitoreo para hogares o comercios.",
+    price: "Consultar",
+    benefits: ["Alertas al celular", "Mayor protección", "Sistema ampliable"],
+    whatsappText: "Hola, quiero consultar por el Kit Seguridad",
+  },
+  {
+    title: "Kit Cámaras y Videoportero",
+    category: "Cámaras",
+    icon: Camera,
+    description: "Visualizá ingresos, cámaras y accesos desde cualquier lugar.",
+    price: "Consultar",
+    benefits: ["Vista remota", "Más control", "Ideal para accesos"],
+    whatsappText: "Hola, quiero consultar por el Kit Cámaras y Videoportero",
+  },
+  {
+    title: "Kit Accesos Inteligentes",
+    category: "Accesos",
+    icon: DoorOpen,
+    description: "Soluciones para cerraduras, portones y accesos automatizados.",
+    price: "Consultar",
+    benefits: ["Acceso cómodo", "Más seguridad", "Control personalizado"],
+    whatsappText: "Hola, quiero consultar por el Kit Accesos Inteligentes",
+  },
+];
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
       {/* Header/Navigation */}
@@ -26,6 +82,7 @@ export default function Home() {
             <a href="#inicio" className="text-sm text-muted-foreground hover:text-accent transition">Inicio</a>
             <a href="#nosotros" className="text-sm text-muted-foreground hover:text-accent transition">Nosotros</a>
             <a href="#soluciones" className="text-sm text-muted-foreground hover:text-accent transition">Soluciones</a>
+            <a href="#tienda" className="text-sm text-muted-foreground hover:text-accent transition">Tienda</a>
             <a href="#como-trabajamos" className="text-sm text-muted-foreground hover:text-accent transition">Cómo trabajamos</a>
             <a href="#contacto" className="text-sm text-muted-foreground hover:text-accent transition">Contacto</a>
           </nav>
@@ -51,6 +108,7 @@ export default function Home() {
               <a href="#inicio" className="block text-sm text-muted-foreground hover:text-accent transition">Inicio</a>
               <a href="#nosotros" className="block text-sm text-muted-foreground hover:text-accent transition">Nosotros</a>
               <a href="#soluciones" className="block text-sm text-muted-foreground hover:text-accent transition">Soluciones</a>
+              <a href="#tienda" className="block text-sm text-muted-foreground hover:text-accent transition">Tienda</a>
               <a href="#como-trabajamos" className="block text-sm text-muted-foreground hover:text-accent transition">Cómo trabajamos</a>
               <a href="#contacto" className="block text-sm text-muted-foreground hover:text-accent transition">Contacto</a>
               <Button className="w-full bg-primary hover:bg-primary/90 text-white gap-2">
@@ -230,6 +288,106 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="tienda" className="py-20 bg-background">
+  <div className="container mx-auto px-4">
+    <div className="text-center max-w-3xl mx-auto mb-14">
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
+        <ShoppingBag className="w-4 h-4" />
+        Tienda Inteligente
+      </div>
+
+      <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        Kits inteligentes para tu hogar o negocio
+      </h2>
+
+      <p className="text-muted-foreground text-lg">
+        Elegí una solución inicial y te asesoramos para adaptarla a tu instalación.
+        Sin complicaciones, sin carrito y con atención personalizada.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {storeItems.map((item, index) => {
+        const Icon = item.icon;
+
+        return (
+          <div
+            key={index}
+            className="group rounded-2xl border bg-card p-6 shadow-sm hover:shadow-xl transition-all duration-300"
+          >
+            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition">
+              <Icon className="w-7 h-7 text-primary" />
+            </div>
+
+            <span className="text-sm text-primary font-medium">
+              {item.category}
+            </span>
+
+            <h3 className="text-xl font-bold mt-2 mb-3">
+              {item.title}
+            </h3>
+
+            <p className="text-muted-foreground mb-5">
+              {item.description}
+            </p>
+
+            <ul className="space-y-2 mb-6">
+              {item.benefits.map((benefit, i) => (
+                <li key={i} className="flex items-center gap-2 text-sm">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                  {benefit}
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex items-center justify-between mb-6">
+              <span className="text-sm text-muted-foreground">Precio</span>
+              <span className="text-xl font-bold">{item.price}</span>
+            </div>
+
+            <Button
+              className="w-full bg-primary hover:bg-primary/90 text-white gap-2"
+              onClick={() =>
+                window.open(
+                  `https://wa.me/543442405219?text=${encodeURIComponent(item.whatsappText)}`,
+                  "_blank"
+                )
+              }
+            >
+              Consultar por WhatsApp
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
+        );
+      })}
+    </div>
+
+    <div className="mt-16 rounded-3xl bg-primary/10 p-8 md:p-12 text-center">
+      <h3 className="text-2xl md:text-3xl font-bold mb-4">
+        ¿No sabés qué kit elegir?
+      </h3>
+
+      <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+        Contanos qué querés automatizar y te armamos una propuesta personalizada.
+      </p>
+
+      <Button
+        size="lg"
+        className="bg-primary hover:bg-primary/90 text-white gap-2"
+        onClick={() =>
+          window.open(
+            "https://wa.me/543442405219?text=Hola,%20quiero%20asesoramiento%20para%20elegir%20un%20kit%20inteligente",
+            "_blank"
+          )
+        }
+      >
+        Solicitar asesoramiento
+        <ArrowRight className="w-4 h-4" />
+      </Button>
+    </div>
+  </div>
+</section>
+
       {/* How We Work Section */}
       <section id="como-trabajamos" className="py-20 md:py-32">
         <div className="container">
@@ -365,6 +523,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#inicio" className="hover:text-accent transition">Inicio</a></li>
                 <li><a href="#nosotros" className="hover:text-accent transition">Nosotros</a></li>
+                <li><a href="#tienda" className="hover:text-accent transition">Tienda</a></li>
                 <li><a href="#soluciones" className="hover:text-accent transition">Soluciones</a></li>
                 <li><a href="#como-trabajamos" className="hover:text-accent transition">Cómo trabajamos</a></li>
               </ul>
