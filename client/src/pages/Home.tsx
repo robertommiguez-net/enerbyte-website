@@ -85,7 +85,7 @@ export default function Home() {
                   Hablemos de tu proyecto
                   <ArrowRight className="w-4 h-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-accent text-accent onClick={() => document.getElementById("soluciones")?.scrollIntoView({ behavior: "smooth" })}>
+                <Button size="lg" variant="outline" className="border-accent text-accent" onClick={() => document.getElementById("soluciones")?.scrollIntoView({ behavior: "smooth" })}>
                   Ver soluciones
                 </Button>
               </div>
