@@ -81,11 +81,11 @@ export default function Home() {
                 Integramos tecnología moderna para que puedas controlar luces, climatización, cámaras, rutinas y consumo eléctrico desde tu celular, de forma simple, segura y personalizada.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2 shadow-lg hover:shadow-xl transition-all">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2" onClick={() => window.open('https://wa.me/543442405219', "_blank")}>
                   Hablemos de tu proyecto
                   <ArrowRight className="w-4 h-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 transition-all">
+                <Button size="lg" variant="outline" className="border-accent text-accent onClick={() => document.getElementById("soluciones")?.scrollIntoView({ behavior: "smooth" })}>
                   Ver soluciones
                 </Button>
               </div>
