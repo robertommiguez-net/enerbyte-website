@@ -5,7 +5,7 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Zap, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, Home, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
+import { ChevronRight, Zap, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
   {
     title: "Kit Smart Home Básico",
     category: "Hogar",
-    icon: Home,
+    icon: House,
     description: "Ideal para comenzar a automatizar tu casa de forma simple.",
     price: "Consultar",
     benefits: ["Control desde el celular", "Instalación simple", "Escalable"],
