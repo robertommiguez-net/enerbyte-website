@@ -12,8 +12,8 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-         {/* Header/Navigation */}
+    <div className="min-h-screen bg-background text-foreground overflow-hidden">
+      {/* Header/Navigation */}
       <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2">
@@ -31,13 +31,6 @@ export default function Home() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <a
-              href="https://wa.me/543442405219" target="_blank" rel="noopener noreferrer">
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2">
-                Solicitar asesoramiento por WhatsApp
-                <ArrowRight className="w-4 h-4" />
-                </Button>
-            </a>
             <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2">
               Solicitar asesoramiento
               <ChevronRight className="w-4 h-4" />
@@ -343,16 +336,11 @@ export default function Home() {
           <p className="text-lg text-muted-foreground">
             Solicitá una asesoría inicial y descubrí qué soluciones inteligentes podés implementar en tu espacio.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2 shadow-lg hover:shadow-xl transition-all">
-             <a
-              href="https://wa.me/543442405219" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2 shadow-lg hover:shadow-xl transition-all">
-                Solicitar asesoramiento por WhatsApp
+              Solicitar asesoramiento por WhatsApp
               <ArrowRight className="w-4 h-4" />
-                </Button>
-            </a>
-            <a href="#soluciones">      
+            </Button>
             <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent/10 transition-all">
               Ver soluciones
             </Button>
