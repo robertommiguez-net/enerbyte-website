@@ -31,9 +31,9 @@ export default function Home() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2">
+            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2" onClick={() => window.open('https://wa.me/543442405219', "_blank")}>
               Solicitar asesoramiento
-              <ChevronRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" />
             </Button>
             <button 
               className="md:hidden p-2 hover:bg-secondary rounded-lg transition"
