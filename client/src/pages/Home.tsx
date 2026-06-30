@@ -306,10 +306,7 @@ export default function Home() {
         y diferenciando tu proyecto frente a la competencia.
       </p>
 
-      <a
-        href="/constructoras"
-        className="inline-block bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition"
-      >
+      <a href="/Constructoras" className="inline-block bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition">
         Ver solución para constructoras
       </a>
     </div>
