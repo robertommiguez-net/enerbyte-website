@@ -288,6 +288,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-20 bg-slate-100">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    
+    <div>
+      <span className="text-blue-600 font-semibold uppercase tracking-widest">
+        Para constructoras
+      </span>
+
+      <h2 className="text-4xl font-bold text-slate-900 mt-4 mb-6">
+        Sumá domótica a tus edificios desde el proyecto
+      </h2>
+
+      <p className="text-slate-600 text-lg mb-8">
+        Enerbyte diseña e integra soluciones de automatización para departamentos,
+        edificios y desarrollos inmobiliarios, aumentando el valor de cada unidad
+        y diferenciando tu proyecto frente a la competencia.
+      </p>
+
+      <a
+        href="/constructoras"
+        className="inline-block bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition"
+      >
+        Ver solución para constructoras
+      </a>
+    </div>
+
+    <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl">
+      <h3 className="text-2xl font-bold mb-5">
+        Packs disponibles
+      </h3>
+
+      <ul className="space-y-4 text-slate-300">
+        <li>✓ Pack Esencial Smart Ready</li>
+        <li>✓ Pack Confort para departamentos modernos</li>
+        <li>✓ Pack Premium para edificios de categoría</li>
+        <li>✓ Pack Signature para proyectos de lujo</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
       <section id="tienda" className="py-20 bg-background">
   <div className="container mx-auto px-4">
     <div className="text-center max-w-3xl mx-auto mb-14">
