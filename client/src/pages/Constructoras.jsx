@@ -1,4 +1,3 @@
-import ConstructorasSection from "../components/ConstructorasSection";
 
 export default function Constructoras() {
   return (
