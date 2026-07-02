@@ -427,41 +427,7 @@ export default function Home() {
   </div>
 </section>
 
-      {/* How We Work Section */}
-      <section id="como-trabajamos" className="py-20 md:py-32">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
-            De la idea al espacio inteligente.
-          </h2>
-          
-          <div className="grid md:grid-cols-5 gap-4 md:gap-2">
-            {[
-              { step: 'Escuchamos', desc: 'Conocemos qué querés automatizar, qué problema necesitás resolver y cuál es tu presupuesto.' },
-              { step: 'Diseñamos', desc: 'Armamos una propuesta clara con dispositivos, funciones, instalación y posibilidades de crecimiento.' },
-              { step: 'Instalamos', desc: 'Realizamos la instalación de forma prolija, segura y profesional.' },
-              { step: 'Configuramos', desc: 'Creamos rutinas, escenas, controles desde celular y automatizaciones personalizadas.' },
-              { step: 'Acompañamos', desc: 'Brindamos soporte, ajustes y mejoras para que el sistema siga evolucionando con vos.' }
-            ].map((item, i) => (
-              <div key={i} className="relative">
-                <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent transition duration-300 card-float">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary flex items-center justify-center mx-auto mb-4">
-                    <span className="text-primary font-bold">{i + 1}</span>
-                  </div>
-                  <h3 className="font-bold mb-2 text-accent">{item.step}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-                {i < 4 && (
-                  <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
-                    <ChevronRight className="w-6 h-6 text-accent" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ================= TIENDA ENERBYTE ================= */}
+{/* ================= TIENDA ENERBYTE ================= */}
 
 <section id="tienda" className="py-20 bg-secondary/20">
 
@@ -498,6 +464,40 @@ export default function Home() {
 
 </section>
 
+      {/* How We Work Section */}
+      <section id="como-trabajamos" className="py-20 md:py-32">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+            De la idea al espacio inteligente.
+          </h2>
+          
+          <div className="grid md:grid-cols-5 gap-4 md:gap-2">
+            {[
+              { step: 'Escuchamos', desc: 'Conocemos qué querés automatizar, qué problema necesitás resolver y cuál es tu presupuesto.' },
+              { step: 'Diseñamos', desc: 'Armamos una propuesta clara con dispositivos, funciones, instalación y posibilidades de crecimiento.' },
+              { step: 'Instalamos', desc: 'Realizamos la instalación de forma prolija, segura y profesional.' },
+              { step: 'Configuramos', desc: 'Creamos rutinas, escenas, controles desde celular y automatizaciones personalizadas.' },
+              { step: 'Acompañamos', desc: 'Brindamos soporte, ajustes y mejoras para que el sistema siga evolucionando con vos.' }
+            ].map((item, i) => (
+              <div key={i} className="relative">
+                <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent transition duration-300 card-float">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary flex items-center justify-center mx-auto mb-4">
+                    <span className="text-primary font-bold">{i + 1}</span>
+                  </div>
+                  <h3 className="font-bold mb-2 text-accent">{item.step}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+                {i < 4 && (
+                  <div className="hidden md:block absolute top-1/2 -right-2 transform -translate-y-1/2 z-10">
+                    <ChevronRight className="w-6 h-6 text-accent" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
       {/* Why Enerbyte Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container">
