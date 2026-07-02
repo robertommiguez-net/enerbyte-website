@@ -7,6 +7,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Zap, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import { TiendaSection } from "@/components/TiendaSection";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -523,6 +524,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Tienda */}
+      <TiendaSection showHeader={false} />
 
       {/* CTA Section */}
       <section id="contacto" className="py-20 md:py-32 bg-secondary/30">

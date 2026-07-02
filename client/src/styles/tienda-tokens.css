@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   Tokens de color para TiendaSection (paleta Enerbyte).
+   Estos tokens son los mismos que usa shadcn/ui. Si tu proyecto
+   ya los define, no es necesario duplicarlos.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --card: 222 40% 16%;
+  --card-foreground: 210 40% 98%;
+  --muted: 217 33% 22%;
+  --muted-foreground: 215 20% 70%;
+  --border: 217 33% 25%;
+  --primary: 199 89% 60%;
+  --primary-foreground: 222 47% 11%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
