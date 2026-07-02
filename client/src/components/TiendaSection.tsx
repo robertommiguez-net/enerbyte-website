@@ -20,6 +20,7 @@
  * directamente debajo del Hero del Home.
  */
 
+import { products } from "@/data/products";
 import { useMemo, useState } from "react";
 import {
   Lightbulb, Camera, Cpu, Thermometer, Radio, Plug, Zap, ShieldCheck,
@@ -36,16 +37,7 @@ type Product = {
   badge?: string;
 };
 
-const PRODUCTS: Product[] = [
-  { id: "p1", name: "Lámpara LED RGBW Wi-Fi", tag: "9W · E27 · 16M colores", price: 8990, category: "Iluminación", icon: Lightbulb, badge: "Más vendido" },
-  { id: "p2", name: "Cámara IP 2K con visión nocturna", tag: "Interior · Audio bidireccional", price: 34990, category: "Seguridad", icon: Camera },
-  { id: "p3", name: "Hub Zigbee 3.0 + Matter", tag: "Compatible Home Assistant", price: 42500, category: "Control", icon: Cpu, badge: "Nuevo" },
-  { id: "p4", name: "Termostato inteligente", tag: "Split · IR universal", price: 27900, category: "Climatización", icon: Thermometer },
-  { id: "p5", name: "Sensor de presencia mmWave", tag: "Zigbee · 5.8 GHz", price: 18500, category: "Sensores", icon: Radio },
-  { id: "p6", name: "Relé Wi-Fi 2 canales", tag: "10A · Modo pulso", price: 9900, category: "Control", icon: Plug },
-  { id: "p7", name: "Sensor de apertura Zigbee", tag: "Puertas y ventanas · Pila 1 año", price: 6500, category: "Sensores", icon: ShieldCheck },
-  { id: "p8", name: "Enchufe con medición de consumo", tag: "16A · Estadísticas en la app", price: 11900, category: "Energía", icon: Zap, badge: "Ahorro" },
-];
+const PRODUCTS: products;
 
 const CATEGORIES = ["Todo", "Iluminación", "Seguridad", "Sensores", "Control", "Climatización", "Energía"] as const;
 
