@@ -607,7 +607,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4 text-accent">Contacto</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>📍 Concepción del Uruguay – Entre Ríos</li>
+                <li><a href="https://maps.google.com/?q=Concepción+del+Uruguay+Entre+Ríos" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition"> 📍 Concepción del Uruguay - Entre Ríos </a></li>
                 <li>📲 WhatsApp: +54 (3442405219)</li>
                 <li>📧 Email: enerbyte.ar@gmail.com</li>
               </ul>
@@ -615,10 +615,11 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4 text-accent">Redes Sociales</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-accent transition">Instagram @enerbyte.ar</a></li>
-                <li><a href="#" className="hover:text-accent transition">Facebook Enerbyte.ar</a></li>
-                <li><a href="#" className="hover:text-accent transition">LinkedIn Enerbyte</a></li>
-              </ul>
+                <li><a href="https://www.instagram.com/enerbyte.ar" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition"> Instagram @enerbyte.ar </a> </li>
+                <li><a href="https://www.facebook.com/enerbyte.ar"  target="_blank" rel="noopener noreferrer" className="hover:text-accent transition"> Facebook Enerbyte.ar </a></li>
+                <li><a href="https://www.linkedin.com/company/enerbyte" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition"> LinkedIn Enerbyte </a></li>
+                <li><a href="mailto:enerbyte.ar@gmail.com" className="hover:text-accent transition"> enerbyte.ar@gmail.com</a></li>
+                </ul>
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
