@@ -11,20 +11,6 @@ import { TiendaSection } from "@/components/TiendaSection";
 import "@/styles/tienda-tokens.css";
 
 export default function Home() {
-  return (
-    <>
-      <TuHero />
-      <TiendaSection
-        showHeader={false}
-        showHero={false}
-        showFooter={false}
-      />
-      <TuFooter />
-    </>
-  );
-}
-
-export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const storeItems = [
