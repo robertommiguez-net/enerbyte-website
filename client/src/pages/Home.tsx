@@ -461,6 +461,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ================= TIENDA ENERBYTE ================= */}
+
+<section id="tienda" className="py-20 bg-secondary/20">
+
+  <div className="container mx-auto px-4">
+
+    <div className="text-center mb-10">
+
+      <h2 className="text-4xl font-bold mb-4">
+        Tienda Enerbyte
+      </h2>
+
+      <p className="text-muted-foreground text-lg">
+        Productos seleccionados para automatización,
+        seguridad y eficiencia energética.
+      </p>
+
+    </div>
+
+    <a
+      href="/images/example-products.png"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+
+      <img
+        src="/images/example-products.png"
+        alt="Productos Enerbyte"
+        className="w-full rounded-2xl shadow-2xl border border-accent/20 hover:scale-[1.02] transition-all duration-300 cursor-zoom-in"
+      />
+
+    </a>
+
+  </div>
+
+</section>
+
       {/* Why Enerbyte Section */}
       <section className="py-20 md:py-32 bg-secondary/30">
         <div className="container">
