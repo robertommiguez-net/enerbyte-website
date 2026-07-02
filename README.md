@@ -139,8 +139,8 @@ Editar variables CSS en `client/src/index.css` en la sección `:root`:
 **Slogan**: Automatizamos el futuro
 
 **Datos a completar**:
-- WhatsApp: [Agregar número]
-- Email: [Agregar email]
+- WhatsApp: [+543442405219]
+- Email: [enerbyte.ar@gmail.com]
 - Instagram: @enerbyte.ar
 - Facebook: Enerbyte
 
@@ -154,7 +154,7 @@ Editar variables CSS en `client/src/index.css` en la sección `:root`:
 
 ## 🔐 Seguridad
 
-- ✅ HTTPS automático (Manus)
+- ✅ HTTPS (RMDesarrollos.net)
 - ✅ Headers de seguridad configurados
 - ✅ Sin datos sensibles en frontend
 - ✅ Validación de entrada
@@ -218,7 +218,7 @@ Proyecto privado de Enerbyte
 
 ## 👨‍💼 Autor
 
-Creado por Manus AI - Junio 2026
+Creado por RMDEsarrollos.net - Junio 2026
 
 ---
 
