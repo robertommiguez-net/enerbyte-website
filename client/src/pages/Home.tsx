@@ -7,8 +7,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Zap, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { TiendaSection } from "@/components/TiendaSection";
-import "@/styles/tienda-tokens.css";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
