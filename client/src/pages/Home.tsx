@@ -226,7 +226,7 @@ export default function Home() {
             <div className="relative hidden md:block">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg blur-2xl"></div>
               <img 
-                src="/manus-storage/automation-abstract_50e9bb3a.png" 
+                src="/images/automation-hero.png" 
                 alt="Automatización" 
                 className="relative rounded-lg shadow-2xl border border-accent/30 hover:border-accent/60 transition-all duration-300" 
               />
