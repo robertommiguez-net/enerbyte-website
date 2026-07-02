@@ -301,7 +301,7 @@ export default function Home() {
       </h2>
 
       <p className="text-slate-600 text-lg mb-8">
-        Enerbyte diseña e integra soluciones de automatización para departamentos,
+        Enerbyte.ar diseña e integra soluciones de automatización para departamentos,
         edificios y desarrollos inmobiliarios, aumentando el valor de cada unidad
         y diferenciando tu proyecto frente a la competencia.
       </p>
@@ -489,7 +489,7 @@ export default function Home() {
             <div className="space-y-6">
               {[
                 { icon: Cog, title: 'Soluciones a medida', desc: 'No todos los hogares ni negocios necesitan lo mismo. Diseñamos cada proyecto según el caso.' },
-                { icon: Zap, title: 'Preparado para el futuro', desc: 'Enerbyte nace desde la domótica, pero evoluciona hacia energía inteligente, movilidad eléctrica y soluciones para vehículos eléctricos.' }
+                { icon: Zap, title: 'Preparado para el futuro', desc: 'Enerbyte.ar nace desde la domótica, pero evoluciona hacia energía inteligente, movilidad eléctrica y soluciones para vehículos eléctricos.' }
               ].map((benefit, i) => (
                 <div key={i} className="flex gap-4 group">
                   <div className="flex-shrink-0">
@@ -513,7 +513,7 @@ export default function Home() {
             Domótica hoy. <span className="text-accent">Energía inteligente</span> mañana.
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Enerbyte nace para acercar la automatización a hogares y negocios, pero nuestra visión va más allá.
+            Enerbyte.ar nace para acercar la automatización a hogares y negocios, pero nuestra visión va más allá.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             Estamos construyendo una empresa preparada para integrar en el futuro soluciones de energía inteligente, cargadores para vehículos eléctricos, diagnóstico de baterías y tecnologías vinculadas a la movilidad eléctrica.
@@ -522,10 +522,7 @@ export default function Home() {
             Hoy automatizamos tu espacio. Mañana, conectamos tu energía.
           </p>
         </div>
-      </section>
-
-      {/* Tienda */}
-      <TiendaSection showHeader={false} />
+      </section>    
 
       {/* CTA Section */}
       <section id="contacto" className="py-20 md:py-32 bg-secondary/30">
@@ -555,7 +552,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img src="/images/logo.png" alt="Enerbyte" className="h-6 w-6" />
-                <span className="font-bold">ENERBYTE</span>
+                <span className="font-bold">ENERBYTE.ar</span>
               </div>
               <p className="text-sm text-muted-foreground">Automatización y Energía Inteligente</p>
               <p className="text-xs text-muted-foreground mt-2">Domótica, seguridad, automatización y eficiencia energética para hogares y negocios.</p>
@@ -588,7 +585,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2026 Enerbyte. <span className="text-accent font-bold">Automatizamos el futuro.</span></p>
+            <p>© 2026 - RMDesarrollos.net Enerbyte.ar. <span className="text-accent font-bold">Automatizamos el futuro.</span></p>
           </div>
         </div>
       </footer>
