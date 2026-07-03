@@ -226,4 +226,23 @@
   html {
     scroll-behavior: smooth;
   }
+  @keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@media (max-width: 768px) {
+  #inicio {
+    min-height: 100vh;
+  }
+
+  #inicio > div:first-child {
+    background-size: auto 100% !important;
+    background-position: center top !important;
+  }
+}
 }
