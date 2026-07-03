@@ -122,11 +122,11 @@ export default function Home() {
       {/* Hero Section */}
       <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
   {/* Fondo hiperrealista */}
-      <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('/images/automation-hero.png')",}} />
+      <div className="absolute inset-0 bg-no-repeat md:bg-cover" style={{backgroundImage: "url('/images/automation-hero.png')", backgroundSize: "auto 100%", backgroundPosition: "center top",  }}/>
 
   {/* Overlay oscuro */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#020b1f]/75 to-black/95" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-[#020b1f]/35 to-black/70" />
+  <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
 
   {/* Glow azul */}
   <div className="absolute -top-24 -right-24 w-72 h-72 bg-primary/30 rounded-full blur-3xl" />
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="relative hidden md:block">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg blur-2xl"></div>
               <img 
-                src="/images/automation-hero.png" 
+                src="/images/automation-hero2.png" 
                 alt="Automatización" 
                 className="relative rounded-lg shadow-2xl border border-accent/30 hover:border-accent/60 transition-all duration-300" 
               />
