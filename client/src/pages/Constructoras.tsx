@@ -144,6 +144,27 @@ const Constructoras = () => {
               >
                 Descargar dossier
               </a>
+              <div className="relative hidden md:block">
+  <div className="rounded-3xl border border-blue-400/20 bg-slate-900/70 p-6 shadow-2xl">
+    <img
+      src="/images/constructora-hero.png"
+      alt="Automatización para constructoras"
+      className="w-full rounded-2xl object-cover"
+    />
+
+    <div className="mt-6 grid grid-cols-2 gap-4">
+      <div className="rounded-xl bg-blue-600/20 p-4">
+        <p className="text-sm text-slate-300">Unidades</p>
+        <p className="text-2xl font-bold">Smart Ready</p>
+      </div>
+
+      <div className="rounded-xl bg-cyan-500/20 p-4">
+        <p className="text-sm text-slate-300">Valor agregado</p>
+        <p className="text-2xl font-bold">+ Diferenciación</p>
+      </div>
+    </div>
+  </div>
+</div>
             </div>
           </div>
         </div>
