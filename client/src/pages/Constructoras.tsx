@@ -144,7 +144,10 @@ const Constructoras = () => {
               >
                 Descargar dossier
               </a>
-              <div className="relative hidden md:block">
+            </div>
+          </div>
+        </div>
+        <div className="relative hidden md:block">
   <div className="rounded-3xl border border-blue-400/20 bg-slate-900/70 p-6 shadow-2xl">
     <img
       src="/images/automation-hero2.png"
@@ -165,9 +168,6 @@ const Constructoras = () => {
     </div>
   </div>
 </div>
-            </div>
-          </div>
-        </div>
 
           <div className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 shadow-2xl">
             <div className="rounded-[1.5rem] bg-gradient-to-br from-slate-800 to-slate-950 p-6">
