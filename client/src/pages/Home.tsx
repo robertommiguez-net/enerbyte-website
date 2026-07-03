@@ -122,7 +122,7 @@ export default function Home() {
       {/* Hero Section */}
       <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
   {/* Fondo hiperrealista */}
-      <div className="absolute inset-0 bg-no-repeat md:bg-cover" style={{backgroundImage: "url('/images/automation-hero.png')", backgroundSize: "auto 100%", backgroundPosition: "center top",  }}/>
+      <div className="absolute inset-0 bg-no-repeat md:bg-cover" style={{backgroundImage: "url('/images/automation-hero.png')", backgroundSize: "auto 100%", backgroundPosition: "center center",  }}/>
 
   {/* Overlay oscuro */}
   <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-[#020b1f]/35 to-black/70" />
