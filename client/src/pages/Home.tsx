@@ -120,61 +120,69 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <div className="absolute top-20 right-0 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-        
-        <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Tu espacio, <span className="text-accent">verdaderamente</span> inteligente.
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                En Enerbyte transformamos hogares, comercios y empresas mediante automatización inteligente, seguridad conectada y eficiencia energética.
-              </p>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Integramos tecnología moderna para que puedas controlar luces, climatización, cámaras, rutinas y consumo eléctrico desde tu celular, de forma simple, segura y personalizada.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2" onClick={() => window.open('https://wa.me/543442405219', "_blank")}>
-                  Hablemos de tu proyecto
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-accent text-accent" onClick={() => document.getElementById("soluciones")?.scrollIntoView({ behavior: "smooth" })}>
-                  Ver soluciones
-                </Button>
-              </div>
-            </div>
+      <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
+  {/* Fondo hiperrealista */}
+      <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('/images/automation-hero.png')",}} />
 
-            <div className="relative block mt-8 md:mt-0">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-lg blur-2xl"></div>
-              <img 
-                src="/images/hero.png" 
-                alt="Smart Home" 
-                className="relative rounded-lg shadow-2xl border border-accent/30 hover:border-accent/60 transition-all duration-300" 
-              />
-            </div>
-          </div>
+  {/* Overlay oscuro */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-[#020b1f]/75 to-black/95" />
+  <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
 
-          {/* Indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-border">
-            {[
-              { icon: Smartphone, label: 'Control desde celular' },
-              { icon: Zap, label: 'Domótica personalizada' },
-              { icon: Leaf, label: 'Ahorro energético' },
-              { icon: Lock, label: 'Seguridad inteligente' }
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 group">
-                <item.icon className="w-5 h-5 text-accent group-hover:scale-110 transition-transform" />
-                <span className="text-sm text-muted-foreground group-hover:text-accent transition-colors">{item.label}</span>
-              </div>
-            ))}
+  {/* Glow azul */}
+  <div className="absolute -top-24 -right-24 w-72 h-72 bg-primary/30 rounded-full blur-3xl" />
+  <div className="absolute bottom-20 left-10 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl" />
+
+  <div className="relative z-10 container mx-auto px-5 pt-32 pb-16">
+    <div className="max-w-3xl">
+
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary text-sm font-semibold mb-6 backdrop-blur">
+        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+        Tecnología inteligente
+      </div>
+
+      <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-6">
+        Tu espacio,
+        <br />
+        <span className="text-primary">verdaderamente</span>
+        <br />
+        inteligente.
+      </h1>
+
+      <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+        Automatización, seguridad y eficiencia energética para hogares,
+        comercios y empresas.
+      </p>
+
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
+        {[
+          "Iluminación",
+          "Climatización",
+          "Seguridad",
+          "Ahorro",
+          "Control total",
+        ].map((item) => (
+          <div
+            key={item}
+            className="rounded-2xl border border-primary/20 bg-white/5 backdrop-blur-md px-4 py-4 text-center text-white/90 shadow-lg"
+          >
+            <span className="text-sm">{item}</span>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg py-7 rounded-xl gap-2 shadow-xl shadow-primary/30" onClick={() => window.open("https://wa.me/543442405219", "_blank")}>
+          Hablemos de tu proyecto
+          <ArrowRight className="w-5 h-5" />
+        </Button>
+
+        <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 text-lg py-7 rounded-xl" onClick={() => document .getElementById("soluciones")?.scrollIntoView({ behavior: "smooth" })}>
+          Ver soluciones
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Differential Section */}
       <section id="nosotros" className="py-20 md:py-32 bg-secondary/30 border-t border-accent/20">
