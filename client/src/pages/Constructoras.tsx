@@ -147,13 +147,13 @@ const Constructoras = () => {
             </div>
           </div>
         </div>
-        <div className="relative hidden md:block">
+        <div className="relative hidden md:block max-w-md justify-self-end">
   <div className="rounded-3xl border border-blue-400/20 bg-slate-900/70 p-6 shadow-2xl">
     <img
-      src="/images/automation-hero2.png"
-      alt="Automatización para constructoras"
-      className="w-full rounded-2xl object-cover"
-    />
+  src="/images/automation-hero2.png"
+  alt="Automatización para constructoras"
+  className="w-full max-h-[360px] rounded-2xl object-cover object-center opacity-90"
+/>
 
     <div className="mt-6 grid grid-cols-2 gap-4">
       <div className="rounded-xl bg-blue-600/20 p-4">
