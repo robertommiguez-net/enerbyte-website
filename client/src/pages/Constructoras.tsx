@@ -105,7 +105,7 @@ const Constructoras = () => {
         "Sí. Los packs están pensados para crecer con sensores, cámaras, cortinas, climatización, energía solar y más.",
     },
   ];
-
+  
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <section className="relative overflow-hidden px-6 py-24 md:py-32">
@@ -146,6 +146,7 @@ const Constructoras = () => {
               </a>
             </div>
           </div>
+        </div>
 
           <div className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 shadow-2xl">
             <div className="rounded-[1.5rem] bg-gradient-to-br from-slate-800 to-slate-950 p-6">
@@ -180,7 +181,6 @@ const Constructoras = () => {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <section className="bg-slate-900/70 px-6 py-20">
@@ -347,11 +347,7 @@ const Constructoras = () => {
           </div>
 
           <div className="space-y-4">
-            {faq.map((item) => (
-              <div
-                key={item.pregunta}
-                className="rounded-2xl border border-slate-800 bg-slate-950 p-6"
-              >
+            {faq.map((item) => ( <div key={item.pregunta} className="rounded-2xl border border-slate-800 bg-slate-950 p-6"              >
                 <h3 className="text-xl font-bold">{item.pregunta}</h3>
                 <p className="mt-3 text-slate-300">{item.respuesta}</p>
               </div>

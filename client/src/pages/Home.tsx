@@ -5,7 +5,7 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Zap, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
+import { ChevronRight, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -121,26 +121,25 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
-  {/* Fondo automation hero */}
-  <div className="absolute inset-0 bg-no-repeat md:bg-cover animate-[heroZoom_18s_ease-in-out_infinite_alternate]" style={{backgroundImage: "url('/images/automation-hero.png')", backgroundSize: "auto 100%", backgroundPosition: "center top",}}/>
+ {/* Fondo automation hero */}
+<div
+  className="absolute inset-0 bg-no-repeat md:bg-cover animate-[heroZoom_18s_ease-in-out_infinite_alternate]"
+  style={{
+    backgroundImage: "url('/images/automation-hero.png')",
+    backgroundSize: "auto 100%",
+    backgroundPosition: "center top",
+  }}
+/>
 
-  {/* Overlay suave para que la imagen tenga más presencia */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-[#020b1f]/25 to-black/75" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/15 to-transparent" />
+{/* Overlay */}
+<div className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#020b1f]/20 to-black/70" />
+<div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
 
-  {/* Luz premium */}
-  <div className="absolute -top-24 -right-24 w-80 h-80 bg-primary/35 rounded-full blur-3xl animate-pulse" />
-  <div className="absolute bottom-10 left-0 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
+{/* Glow */}
+<div className="absolute -top-24 -right-24 w-80 h-80 bg-primary/30 rounded-full blur-3xl animate-pulse" />
+<div className="absolute bottom-10 left-0 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
 
-  {/* Overlay oscuro */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-[#020b1f]/35 to-black/70" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
-
-  {/* Glow azul */}
-  <div className="absolute -top-24 -right-24 w-72 h-72 bg-primary/30 rounded-full blur-3xl" />
-  <div className="absolute bottom-20 left-10 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl" />
-
-  <div className="relative z-10 container mx-auto px-5 pt-32 pb-16">
+    <div className="relative z-10 container mx-auto px-5 pt-32 pb-16">
     <div className="max-w-3xl">
 
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary text-sm font-semibold mb-6 backdrop-blur">
