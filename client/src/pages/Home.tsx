@@ -111,6 +111,21 @@ export default function Home() {
               <a href="#tienda" className="block text-sm text-muted-foreground hover:text-accent transition">Tienda</a>
               <a href="#como-trabajamos" className="block text-sm text-muted-foreground hover:text-accent transition">Cómo trabajamos</a>
               <a href="#contacto" className="block text-sm text-muted-foreground hover:text-accent transition">Contacto</a>
+              <a href="/constructoras" className="block text-sm text-muted-foreground hover:text-accent transition">
+  Constructoras
+</a>
+
+<a href="/hoteles" className="block text-sm text-muted-foreground hover:text-accent transition">
+  Hoteles
+</a>
+
+<a href="/oficinas" className="block text-sm text-muted-foreground hover:text-accent transition">
+  Oficinas
+</a>
+
+<a href="/comercios" className="block text-sm text-muted-foreground hover:text-accent transition">
+  Comercios
+</a>
               <Button className="w-full bg-primary hover:bg-primary/90 text-white gap-2">
                 Solicitar asesoramiento
               </Button>
@@ -317,9 +332,26 @@ export default function Home() {
         y diferenciando tu proyecto frente a la competencia.
       </p>
 
-      <a href="/Constructoras" className="inline-block bg-blue-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-blue-700 transition">
-        Ver solución para constructoras
-      </a>
+      <div className="relative group">
+  <button className="text-sm text-muted-foreground hover:text-accent transition">
+    Soluciones Verticales
+  </button>
+
+  <div className="absolute left-0 mt-3 hidden group-hover:block w-56 rounded-xl border border-border bg-background/95 backdrop-blur-md shadow-xl p-3">
+    <a href="/constructoras" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Constructoras
+    </a>
+    <a href="/hoteles" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Hoteles
+    </a>
+    <a href="/oficinas" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Oficinas
+    </a>
+    <a href="/comercios" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Comercios
+    </a>
+  </div>
+</div>
     </div>
 
     <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl">
@@ -571,6 +603,60 @@ export default function Home() {
           </p>
         </div>
       </section>    
+
+      <section id="verticales" className="py-20 bg-secondary/30">
+  <div className="container mx-auto px-4">
+    <div className="text-center max-w-3xl mx-auto mb-12">
+      <h2 className="text-3xl md:text-5xl font-bold mb-4">
+        Soluciones verticales
+      </h2>
+      <p className="text-muted-foreground text-lg">
+        Adaptamos la automatización inteligente a distintos sectores.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {[
+        {
+          title: "Constructoras",
+          text: "Unidades Smart Ready desde la entrega.",
+          link: "/constructoras",
+        },
+        {
+          title: "Hoteles",
+          text: "Habitaciones inteligentes y ahorro energético.",
+          link: "/hoteles",
+        },
+        {
+          title: "Oficinas",
+          text: "Confort, seguridad y eficiencia operativa.",
+          link: "/oficinas",
+        },
+        {
+          title: "Comercios",
+          text: "Control, cámaras, alarmas y consumo eléctrico.",
+          link: "/comercios",
+        },
+      ].map((item) => (
+        <a
+          key={item.title}
+          href={item.link}
+          className="rounded-2xl border border-border bg-card p-6 hover:border-accent/60 hover:shadow-xl transition group"
+        >
+          <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition">
+            {item.title}
+          </h3>
+          <p className="text-muted-foreground mb-5">
+            {item.text}
+          </p>
+          <span className="text-accent font-semibold">
+            Ver solución →
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section id="contacto" className="py-20 md:py-32 bg-secondary/30">
