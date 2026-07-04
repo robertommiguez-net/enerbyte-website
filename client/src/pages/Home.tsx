@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
       {/* Header/Navigation */}
-      <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300">
+      <header className="fixed top-0 w-full z-[9999] bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2">
             <img src="/images/logo.png" alt="Enerbyte" className="h-8 w-8" />
@@ -82,8 +82,34 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-8">
             <a href="#inicio" className="text-sm text-muted-foreground hover:text-accent transition">Inicio</a>
             <a href="#nosotros" className="text-sm text-muted-foreground hover:text-accent transition">Nosotros</a>
-            <a href="#soluciones" className="text-sm text-muted-foreground hover:text-accent transition">Soluciones</a>
-            <a href="#tienda" className="text-sm text-muted-foreground hover:text-accent transition">Tienda</a>
+            <a href="#soluciones" className="text-sm text-muted-foreground hover:text-accent transition">
+  Soluciones
+</a>
+
+<div className="relative group py-4">
+  <button className="text-sm text-muted-foreground hover:text-accent transition">
+    Soluciones Verticales
+  </button>
+
+  <div className="absolute left-0 top-full z-[9999] hidden w-60 rounded-xl border border-border bg-background/95 p-3 shadow-2xl backdrop-blur-md group-hover:block">
+    <a href="/constructoras" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
+      Constructoras
+    </a>
+    <a href="/hoteles" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
+      Hoteles
+    </a>
+    <a href="/oficinas" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
+      Oficinas
+    </a>
+    <a href="/comercios" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
+      Comercios
+    </a>
+  </div>
+</div>
+
+<a href="/tienda" className="text-sm text-muted-foreground hover:text-accent transition">
+  Tienda
+</a>
             <a href="#como-trabajamos" className="text-sm text-muted-foreground hover:text-accent transition">Cómo trabajamos</a>
             <a href="#contacto" className="text-sm text-muted-foreground hover:text-accent transition">Contacto</a>
           </nav>
