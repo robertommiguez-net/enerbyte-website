@@ -605,57 +605,26 @@ export default function Home() {
       </section>    
 
       <section id="verticales" className="py-20 bg-secondary/30">
-  <div className="container mx-auto px-4">
-    <div className="text-center max-w-3xl mx-auto mb-12">
-      <h2 className="text-3xl md:text-5xl font-bold mb-4">
-        Soluciones verticales
-      </h2>
-      <p className="text-muted-foreground text-lg">
-        Adaptamos la automatización inteligente a distintos sectores.
-      </p>
-    </div>
+  <div className="relative group">
+  <button className="text-sm text-muted-foreground hover:text-accent transition py-6">
+    Soluciones Verticales
+  </button>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {[
-        {
-          title: "Constructoras",
-          text: "Unidades Smart Ready desde la entrega.",
-          link: "/constructoras",
-        },
-        {
-          title: "Hoteles",
-          text: "Habitaciones inteligentes y ahorro energético.",
-          link: "/hoteles",
-        },
-        {
-          title: "Oficinas",
-          text: "Confort, seguridad y eficiencia operativa.",
-          link: "/oficinas",
-        },
-        {
-          title: "Comercios",
-          text: "Control, cámaras, alarmas y consumo eléctrico.",
-          link: "/comercios",
-        },
-      ].map((item) => (
-        <a
-          key={item.title}
-          href={item.link}
-          className="rounded-2xl border border-border bg-card p-6 hover:border-accent/60 hover:shadow-xl transition group"
-        >
-          <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition">
-            {item.title}
-          </h3>
-          <p className="text-muted-foreground mb-5">
-            {item.text}
-          </p>
-          <span className="text-accent font-semibold">
-            Ver solución →
-          </span>
-        </a>
-      ))}
-    </div>
+  <div className="absolute left-0 top-full z-50 hidden group-hover:block w-60 rounded-xl border border-border bg-background/95 backdrop-blur-md shadow-xl p-3">
+    <a href="/constructoras" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Constructoras
+    </a>
+    <a href="/hoteles" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Hoteles
+    </a>
+    <a href="/oficinas" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Oficinas
+    </a>
+    <a href="/comercios" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
+      Comercios
+    </a>
   </div>
+</div>
 </section>
 
       {/* CTA Section */}
