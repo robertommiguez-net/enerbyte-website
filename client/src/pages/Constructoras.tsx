@@ -109,102 +109,65 @@ const Constructoras = () => {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <section className="relative overflow-hidden px-6 py-24 md:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-slate-950 to-cyan-900/30" />
-        <div className="absolute left-1/2 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl" />
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-950/70 via-slate-950 to-black" />
+  <div className="absolute right-0 top-0 h-full w-1/2 bg-[url('/images/automation-hero2.png')] bg-cover bg-center opacity-30" />
+  <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/30" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
-          <div>
-            <span className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-400">
-              Enerbyte para constructoras
-            </span>
+  <div className="relative mx-auto max-w-7xl">
+    <div className="max-w-3xl">
+      <span className="text-sm font-bold uppercase tracking-[0.35em] text-cyan-400">
+        Enerbyte para constructoras
+      </span>
 
-            <h1 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
-              Edificios inteligentes desde el primer plano.
-            </h1>
+      <h1 className="mt-6 text-5xl font-bold leading-tight md:text-7xl">
+        Edificios inteligentes
+        <span className="block text-cyan-400">desde el primer plano.</span>
+      </h1>
 
-            <p className="mt-6 max-w-2xl text-lg text-slate-300">
-              Diseñamos e integramos automatización residencial para edificios,
-              departamentos y desarrollos inmobiliarios, aumentando el valor de
-              cada unidad y diferenciando tu proyecto desde la entrega.
-            </p>
+      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
+        Integramos domótica, seguridad conectada y eficiencia energética en
+        edificios, departamentos y desarrollos inmobiliarios para entregar
+        unidades Smart Ready desde el día uno.
+      </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="https://wa.me/543442405219"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl bg-blue-600 px-8 py-4 text-center font-bold text-white transition hover:bg-blue-700"
-              >
-                Solicitar reunión
-              </a>
+      <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="https://wa.me/543442405219"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-xl bg-cyan-500 px-8 py-4 text-center font-bold text-white shadow-lg shadow-cyan-500/30 transition hover:bg-cyan-400"
+        >
+          Solicitar reunión
+        </a>
 
-              <a
-                href="/Proyecto_Enerbyte_Pack_Confort_Ejemplo.pdf"
-                className="rounded-xl border border-slate-600 px-8 py-4 text-center font-bold text-white transition hover:bg-white hover:text-slate-950"
-              >
-                Descargar dossier
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="relative hidden md:block max-w-md justify-self-end">
-  <div className="rounded-3xl border border-blue-400/20 bg-slate-900/70 p-6 shadow-2xl">
-    <img
-  src="/images/automation-hero2.png"
-  alt="Automatización para constructoras"
-  className="w-full max-h-[360px] rounded-2xl object-cover object-center opacity-90"
-/>
-
-    <div className="mt-6 grid grid-cols-2 gap-4">
-      <div className="rounded-xl bg-blue-600/20 p-4">
-        <p className="text-sm text-slate-300">Unidades</p>
-        <p className="text-2xl font-bold">Smart Ready</p>
+        <a
+          href="/proyecto_Enerbyte_Pack_Confort_Ejemplo.pdf"
+          className="rounded-xl border border-white/30 px-8 py-4 text-center font-bold text-white transition hover:bg-white/10"
+        >
+          Descargar dossier
+        </a>
       </div>
 
-      <div className="rounded-xl bg-cyan-500/20 p-4">
-        <p className="text-sm text-slate-300">Valor agregado</p>
-        <p className="text-2xl font-bold">+ Diferenciación</p>
+      <div className="mt-12 grid gap-4 sm:grid-cols-3">
+        {[
+          "Smart Ready",
+          "Valor agregado",
+          "Diferenciación comercial",
+        ].map((item) => (
+          <div
+            key={item}
+            className="rounded-2xl border border-cyan-400/20 bg-white/5 p-5 backdrop-blur"
+          >
+            <p className="text-sm text-slate-400">Solución</p>
+            <p className="mt-1 text-xl font-bold text-white">{item}</p>
+          </div>
+        ))}
       </div>
     </div>
   </div>
-</div>
+</section>
 
-          <div className="rounded-[2rem] border border-slate-800 bg-slate-900/80 p-6 shadow-2xl">
-            <div className="rounded-[1.5rem] bg-gradient-to-br from-slate-800 to-slate-950 p-6">
-              <div className="mb-6 flex items-center justify-between">
-                <span className="text-sm text-slate-400">Proyecto Smart Building</span>
-                <span className="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-300">
-                  Online
-                </span>
-              </div>
-
-              <div className="space-y-4">
-                {[
-                  "Ingreso inteligente",
-                  "Iluminación automatizada",
-                  "Cortinas motorizadas",
-                  "Climatización eficiente",
-                  "Medición de consumo",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center justify-between rounded-xl bg-slate-900 p-4"
-                  >
-                    <span>{item}</span>
-                    <span className="text-blue-400">Activo</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 rounded-2xl bg-blue-600 p-5">
-                <p className="text-sm text-blue-100">Valor agregado estimado</p>
-                <p className="mt-2 text-3xl font-bold">+ Diferenciación comercial</p>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <section className="bg-slate-900/70 px-6 py-20">
+      <section className="bg-slate-900/40 px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <span className="font-semibold uppercase tracking-widest text-blue-400">
