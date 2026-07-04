@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
 
   const storeItems = [
   {
@@ -605,25 +606,30 @@ export default function Home() {
       </section>    
 
       <section id="verticales" className="py-20 bg-secondary/30">
-  <div className="relative group">
-  <button className="text-sm text-muted-foreground hover:text-accent transition py-6">
+  <div className="relative">
+  <button
+    onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
+    className="text-sm text-muted-foreground hover:text-accent transition"
+  >
     Soluciones Verticales
   </button>
 
-  <div className="absolute left-0 top-full z-50 hidden group-hover:block w-60 rounded-xl border border-border bg-background/95 backdrop-blur-md shadow-xl p-3">
-    <a href="/constructoras" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Constructoras
-    </a>
-    <a href="/hoteles" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Hoteles
-    </a>
-    <a href="/oficinas" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Oficinas
-    </a>
-    <a href="/comercios" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Comercios
-    </a>
-  </div>
+  {verticalMenuOpen && (
+    <div className="absolute left-0 top-full z-50 mt-3 w-60 rounded-xl border border-border bg-background shadow-xl p-3">
+      <a href="/constructoras" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Constructoras
+      </a>
+      <a href="/hoteles" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Hoteles
+      </a>
+      <a href="/oficinas" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Oficinas
+      </a>
+      <a href="/comercios" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Comercios
+      </a>
+    </div>
+  )}
 </div>
 </section>
 
