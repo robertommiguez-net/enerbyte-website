@@ -93,7 +93,6 @@ export default function Home() {
 >
   Soluciones Verticales
 </a>
- </div>
 
 <a href="/tienda" className="text-sm text-muted-foreground hover:text-accent transition">
   Tienda
@@ -164,8 +163,7 @@ export default function Home() {
     </nav>
   </div>
 )}
-      </header>
-
+     </header>
       {/* Hero Section */}
       <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
  {/* Fondo automation hero */}
@@ -364,26 +362,12 @@ export default function Home() {
         y diferenciando tu proyecto frente a la competencia.
       </p>
 
-      <div className="relative group">
-  <button className="text-sm text-muted-foreground hover:text-accent transition">
-    Soluciones Verticales
-  </button>
-
-  <div className="absolute left-0 mt-3 hidden group-hover:block w-56 rounded-xl border border-border bg-background/95 backdrop-blur-md shadow-xl p-3">
-    <a href="/constructoras" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Constructoras
-    </a>
-    <a href="/hoteles" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Hoteles
-    </a>
-    <a href="/oficinas" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Oficinas
-    </a>
-    <a href="/comercios" className="block px-3 py-2 rounded-lg hover:bg-accent/10 hover:text-accent transition">
-      Comercios
-    </a>
-  </div>
-</div>
+      <a
+  href="/constructoras"
+  className="text-sm text-muted-foreground hover:text-accent transition"
+>
+  Soluciones Verticales
+</a>
     </div>
 
     <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl">
