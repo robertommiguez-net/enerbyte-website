@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [verticalMobileOpen, setVerticalMobileOpen] = useState(false);
   const [verticalMenuOpen, setVerticalMenuOpen] = useState(false);
 
   const storeItems = [
@@ -86,26 +87,13 @@ export default function Home() {
   Soluciones
 </a>
 
-<div className="relative group py-4">
-  <button className="text-sm text-muted-foreground hover:text-accent transition">
-    Soluciones Verticales
-  </button>
-
-  <div className="absolute left-0 top-full z-[9999] hidden w-60 rounded-xl border border-border bg-background/95 p-3 shadow-2xl backdrop-blur-md group-hover:block">
-    <a href="/constructoras" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
-      Constructoras
-    </a>
-    <a href="/hoteles" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
-      Hoteles
-    </a>
-    <a href="/oficinas" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
-      Oficinas
-    </a>
-    <a href="/comercios" className="block rounded-lg px-4 py-3 hover:bg-accent/10 hover:text-accent">
-      Comercios
-    </a>
-  </div>
-</div>
+<a
+  href="/constructoras"
+  className="text-sm text-muted-foreground hover:text-accent transition"
+>
+  Soluciones Verticales
+</a>
+ </div>
 
 <a href="/tienda" className="text-sm text-muted-foreground hover:text-accent transition">
   Tienda
@@ -128,37 +116,54 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-background border-b border-border">
-            <nav className="container py-4 space-y-4">
-              <a href="#inicio" className="block text-sm text-muted-foreground hover:text-accent transition">Inicio</a>
-              <a href="#nosotros" className="block text-sm text-muted-foreground hover:text-accent transition">Nosotros</a>
-              <a href="#soluciones" className="block text-sm text-muted-foreground hover:text-accent transition">Soluciones</a>
-              <a href="#tienda" className="block text-sm text-muted-foreground hover:text-accent transition">Tienda</a>
-              <a href="#como-trabajamos" className="block text-sm text-muted-foreground hover:text-accent transition">Cómo trabajamos</a>
-              <a href="#contacto" className="block text-sm text-muted-foreground hover:text-accent transition">Contacto</a>
-              <a href="/constructoras" className="block text-sm text-muted-foreground hover:text-accent transition">
-  Constructoras
-</a>
+       {/* Mobile Menu */}
+{mobileMenuOpen && (
+  <div className="md:hidden bg-background border-b border-border">
+    <nav className="container py-4 space-y-4">
+      <a href="#inicio" className="block text-sm text-muted-foreground hover:text-accent transition">
+        Inicio
+      </a>
 
-<a href="/hoteles" className="block text-sm text-muted-foreground hover:text-accent transition">
-  Hoteles
-</a>
+      <a href="#nosotros" className="block text-sm text-muted-foreground hover:text-accent transition">
+        Nosotros
+      </a>
 
-<a href="/oficinas" className="block text-sm text-muted-foreground hover:text-accent transition">
-  Oficinas
-</a>
+      <a href="#soluciones" className="block text-sm text-muted-foreground hover:text-accent transition">
+        Soluciones
+      </a>
 
-<a href="/comercios" className="block text-sm text-muted-foreground hover:text-accent transition">
-  Comercios
-</a>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white gap-2">
-                Solicitar asesoramiento
-              </Button>
-            </nav>
+      <a href="#tienda" className="block text-sm text-muted-foreground hover:text-accent transition">
+        Tienda
+      </a>
+
+      <a href="#como-trabajamos" className="block text-sm text-muted-foreground hover:text-accent transition">
+        Cómo trabajamos
+      </a>
+
+      <a href="#contacto" className="block text-sm text-muted-foreground hover:text-accent transition">
+        Contacto
+      </a>
+
+      <div>
+        <button
+          onClick={() => setVerticalMobileOpen(!verticalMobileOpen)}
+          className="w-full flex items-center justify-between text-sm text-muted-foreground hover:text-accent transition"
+        >
+          Soluciones Verticales
+          <span>{verticalMobileOpen ? "−" : "+"}</span>
+        </button>
+
+        {verticalMobileOpen && (
+          <div className="pl-4 mt-3 space-y-3 border-l border-border">
+            <a href="/constructoras" className="block text-sm text-muted-foreground hover:text-accent transition">
+              Constructoras
+            </a>
           </div>
         )}
+      </div>
+    </nav>
+  </div>
+)}
       </header>
 
       {/* Hero Section */}
