@@ -146,8 +146,8 @@ export default function Home() {
         Soluciones
       </a>
 
-      <a href="#tienda" className="block text-sm text-muted-foreground hover:text-accent transition">
-        Tienda
+      <a href="https://tiendadeenerbytear.mitiendanube.com/" target="_blank" rel="noopener noreferrer">
+        🛒 Tienda Online
       </a>
 
       <a href="#como-trabajamos" className="block text-sm text-muted-foreground hover:text-accent transition">
