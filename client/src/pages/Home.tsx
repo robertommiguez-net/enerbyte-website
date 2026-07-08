@@ -80,47 +80,54 @@ export default function Home() {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#inicio" className="text-sm text-muted-foreground hover:text-accent transition">Inicio</a>
-            <a href="#nosotros" className="text-sm text-muted-foreground hover:text-accent transition">Nosotros</a>
-            <a href="#soluciones" className="text-sm text-muted-foreground hover:text-accent transition">
-  Soluciones
-</a>
+          <nav className="hidden md:flex items-center gap-6">
+  <a href="#inicio" className="text-sm text-muted-foreground hover:text-accent transition">
+    Inicio
+  </a>
 
-<a
-  href="/constructoras"
-  className="text-sm text-muted-foreground hover:text-accent transition"
->
-  Soluciones Verticales
-</a>
+  <a href="#nosotros" className="text-sm text-muted-foreground hover:text-accent transition">
+    Nosotros
+  </a>
 
-<a href="/tienda" className="text-sm text-muted-foreground hover:text-accent transition">
-  Tienda
-</a>
-            <a href="#como-trabajamos" className="text-sm text-muted-foreground hover:text-accent transition">Cómo trabajamos</a>
-            <a href="#contacto" className="text-sm text-muted-foreground hover:text-accent transition">Contacto</a>
-          </nav>
+  <a href="#soluciones" className="text-sm text-muted-foreground hover:text-accent transition">
+    Soluciones
+  </a>
 
-          <div className="flex items-center gap-4">
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2" onClick={() => window.open('https://wa.me/543442405219', "_blank")}>
-              Solicitar asesoramiento
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-            <a
-  href="https://tiendadeenerbytear.mitiendanube.com/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-lg border border-cyan-500 px-6 py-3 font-semibold text-cyan-400 hover:bg-cyan-500 hover:text-white transition"
->
-  🛒 Visitar Tienda
-</a>
-            <button 
-              className="md:hidden p-2 hover:bg-secondary rounded-lg transition"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+  <a href="/constructoras" className="text-sm text-muted-foreground hover:text-accent transition">
+    Verticales
+  </a>
+
+  <a href="#como-trabajamos" className="text-sm text-muted-foreground hover:text-accent transition">
+    Cómo trabajamos
+  </a>
+
+  <a href="#contacto" className="text-sm text-muted-foreground hover:text-accent transition">
+    Contacto
+  </a>
+</nav>
+
+          <div className="flex items-center gap-3">
+  <a
+    href="https://tiendadeenerbytear.mitiendanube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hidden lg:flex items-center rounded-lg border border-cyan-500 px-4 py-2 text-sm font-semibold text-cyan-400 hover:bg-cyan-500 hover:text-white transition"
+  >
+    🛒 Tienda
+  </a>
+
+  <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2">
+    Asesoramiento
+    <ArrowRight className="w-4 h-4" />
+  </Button>
+
+  <button
+    className="md:hidden p-2 hover:bg-secondary rounded-lg transition"
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  >
+    {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+  </button>
+</div>
         </div>
 
        {/* Mobile Menu */}
