@@ -376,8 +376,6 @@ export default function Home() {
         y diferenciando tu proyecto frente a la competencia.
       </p>
 
-     <section id="verticales" className="py-20 bg-secondary/30">
- </section>
     </div>
 
     <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl">
