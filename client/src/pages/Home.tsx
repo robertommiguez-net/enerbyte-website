@@ -94,7 +94,7 @@ export default function Home() {
   </a>
 
   <a href="/constructoras" className="text-sm text-muted-foreground hover:text-accent transition">
-    Verticales
+    Sectores
   </a>
 
   <a href="#como-trabajamos" className="text-sm text-muted-foreground hover:text-accent transition">
@@ -107,24 +107,20 @@ export default function Home() {
 </nav>
 
           <div className="flex items-center gap-3">
-  <a
-    href="https://tiendadeenerbytear.mitiendanube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hidden lg:flex items-center rounded-lg border border-cyan-500 px-4 py-2 text-sm font-semibold text-cyan-400 hover:bg-cyan-500 hover:text-white transition"
-  >
+  <a href="https://tiendadeenerbytear.mitiendanube.com/" target="_blank" rel="noopener noreferrer" className="hidden lg:flex items-center rounded-lg border border-cyan-500 px-4 py-2 text-sm font-semibold text-cyan-400 hover:bg-cyan-500 hover:text-white transition">
     🛒 Tienda
   </a>
 
-  <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2">
-    Asesoramiento
+  <Button
+    className="hidden md:flex bg-primary hover:bg-primary/90 text-white gap-2"
+    onClick={() => window.open("https://wa.me/543442405219", "_blank")}>
+    Solicitar proyecto
     <ArrowRight className="w-4 h-4" />
   </Button>
 
   <button
     className="md:hidden p-2 hover:bg-secondary rounded-lg transition"
-    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-  >
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
     {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
   </button>
 </div>
@@ -218,6 +214,9 @@ export default function Home() {
       <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-8 max-w-2xl">
         Automatización, seguridad y eficiencia energética para hogares,
         comercios y empresas.
+      </p>
+      <p className="mt-4 text-sm md:text-base text-cyan-300 font-semibold tracking-wide">
+           Para hogares • Constructoras • Hoteles • Oficinas • Comercios
       </p>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
