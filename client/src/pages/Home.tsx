@@ -376,12 +376,33 @@ export default function Home() {
         y diferenciando tu proyecto frente a la competencia.
       </p>
 
-      <a
-  href="/constructoras"
-  className="text-sm text-muted-foreground hover:text-accent transition"
->
-  Soluciones Verticales
-</a>
+     <section id="verticales" className="py-20 bg-secondary/30">
+  <div className="relative">
+  <button
+    onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
+    className="text-sm text-muted-foreground hover:text-accent transition"
+  >
+    Soluciones Verticales
+  </button>
+
+  {verticalMenuOpen && (
+    <div className="absolute left-0 top-full mt-2 z-999 mt-3 w-60 rounded-xl border border-border bg-slate-900 bg-background shadow-2xl p-3">
+      <a href="/constructoras" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Constructoras
+      </a>
+      <a href="/hoteles" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Hoteles
+      </a>
+      <a href="/oficinas" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Oficinas
+      </a>
+      <a href="/comercios" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
+        Comercios
+      </a>
+    </div>
+  )}
+</div>
+</section>
     </div>
 
     <div className="bg-slate-900 rounded-3xl p-8 text-white shadow-xl">
@@ -633,35 +654,7 @@ export default function Home() {
           </p>
         </div>
       </section>    
-
-      <section id="verticales" className="py-20 bg-secondary/30">
-  <div className="relative">
-  <button
-    onClick={() => setVerticalMenuOpen(!verticalMenuOpen)}
-    className="text-sm text-muted-foreground hover:text-accent transition"
-  >
-    Soluciones Verticales
-  </button>
-
-  {verticalMenuOpen && (
-    <div className="absolute left-0 top-full mt-2 z-999 mt-3 w-60 rounded-xl border border-border bg-slate-900 bg-background shadow-2xl p-3">
-      <a href="/constructoras" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
-        Constructoras
-      </a>
-      <a href="/hoteles" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
-        Hoteles
-      </a>
-      <a href="/oficinas" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
-        Oficinas
-      </a>
-      <a href="/comercios" className="block px-4 py-3 rounded-lg hover:bg-accent/10 hover:text-accent">
-        Comercios
-      </a>
-    </div>
-  )}
-</div>
-</section>
-
+      
       {/* CTA Section */}
       <section id="contacto" className="py-20 md:py-32 bg-secondary/30">
         <div className="container max-w-3xl mx-auto text-center space-y-8">
