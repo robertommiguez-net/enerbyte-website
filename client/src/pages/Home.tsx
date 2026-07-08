@@ -106,6 +106,14 @@ export default function Home() {
               Solicitar asesoramiento
               <ArrowRight className="w-4 h-4" />
             </Button>
+            <a
+  href="https://tiendadeenerbytear.mitiendanube.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-lg border border-cyan-500 px-6 py-3 font-semibold text-cyan-400 hover:bg-cyan-500 hover:text-white transition"
+>
+  🛒 Visitar Tienda
+</a>
             <button 
               className="md:hidden p-2 hover:bg-secondary rounded-lg transition"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
