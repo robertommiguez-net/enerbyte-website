@@ -5,7 +5,7 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
+import { ChevronRight, ChevronDown, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -80,28 +80,76 @@ export default function Home() {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-  <a href="#inicio" className="text-sm text-muted-foreground hover:text-accent transition">
+         <nav className="hidden md:flex items-center gap-6">
+  <a
+    href="#inicio"
+    className="text-sm text-muted-foreground hover:text-accent transition"
+  >
     Inicio
   </a>
 
-  <a href="#nosotros" className="text-sm text-muted-foreground hover:text-accent transition">
+  <a
+    href="#nosotros"
+    className="text-sm text-muted-foreground hover:text-accent transition"
+  >
     Nosotros
   </a>
 
-  <a href="#soluciones" className="text-sm text-muted-foreground hover:text-accent transition">
+  <a
+    href="#soluciones"
+    className="text-sm text-muted-foreground hover:text-accent transition"
+  >
     Soluciones
   </a>
 
-  <a href="/constructoras" className="text-sm text-muted-foreground hover:text-accent transition">
-    Sectores
-  </a>
+  {/* Menú desplegable Sectores */}
+  <div className="relative group">
+    <button
+      type="button"
+      className="flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition py-5"
+    >
+      Sectores
+      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+    </button>
 
-  <a href="#como-trabajamos" className="text-sm text-muted-foreground hover:text-accent transition">
+    <div
+      className="
+        absolute top-full left-1/2 -translate-x-1/2
+        min-w-[190px] rounded-xl border border-border
+        bg-background/95 backdrop-blur-xl shadow-2xl
+        opacity-0 invisible translate-y-2
+        group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+        transition-all duration-200
+        overflow-hidden
+      "
+    >
+      <a
+        href="/constructoras"
+        className="block px-5 py-3 text-sm text-muted-foreground hover:text-accent hover:bg-secondary transition"
+      >
+        Constructoras
+      </a>
+
+      <a
+        href="/empresas"
+        className="block px-5 py-3 text-sm text-muted-foreground hover:text-accent hover:bg-secondary transition"
+      >
+        Empresas
+      </a>
+    </div>
+  </div>
+
+  <a
+    href="#como-trabajamos"
+    className="text-sm text-muted-foreground hover:text-accent transition"
+  >
     Cómo trabajamos
   </a>
 
-  <a href="#contacto" className="text-sm text-muted-foreground hover:text-accent transition">
+  <a
+    href="#contacto"
+    className="text-sm text-muted-foreground hover:text-accent transition"
+  >
     Contacto
   </a>
 </nav>
@@ -155,22 +203,40 @@ export default function Home() {
       </a>
 
       <div>
-        <button
-          onClick={() => setVerticalMobileOpen(!verticalMobileOpen)}
-          className="w-full flex items-center justify-between text-sm text-muted-foreground hover:text-accent transition"
-        >
-          Soluciones Verticales
-          <span>{verticalMobileOpen ? "−" : "+"}</span>
-        </button>
+  <button
+    type="button"
+    onClick={() => setVerticalMobileOpen(!verticalMobileOpen)}
+    className="w-full flex items-center justify-between text-sm text-muted-foreground hover:text-accent transition"
+  >
+    <span>Sectores</span>
 
-        {verticalMobileOpen && (
-          <div className="pl-4 mt-3 space-y-3 border-l border-border">
-            <a href="/constructoras" className="block text-sm text-muted-foreground hover:text-accent transition">
-              Constructoras
-            </a>
-          </div>
-        )}
-      </div>
+    <ChevronDown
+      className={`w-4 h-4 transition-transform duration-200 ${
+        verticalMobileOpen ? "rotate-180" : ""
+      }`}
+    />
+  </button>
+
+  {verticalMobileOpen && (
+    <div className="pl-4 mt-3 space-y-3 border-l border-border">
+      <a
+        href="/constructoras"
+        onClick={() => setMobileMenuOpen(false)}
+        className="block text-sm text-muted-foreground hover:text-accent transition"
+      >
+        Constructoras
+      </a>
+
+      <a
+        href="/empresas"
+        onClick={() => setMobileMenuOpen(false)}
+        className="block text-sm text-muted-foreground hover:text-accent transition"
+      >
+        Empresas
+      </a>
+    </div>
+  )}
+</div>
     </nav>
   </div>
 )}
@@ -199,34 +265,35 @@ export default function Home() {
     <div className="max-w-3xl">
 
       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-primary/10 text-primary text-sm font-semibold mb-6 backdrop-blur">
-        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-        Tecnología inteligente
-      </div>
+  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+  Tecnología, automatización y soporte
+</div>
 
-      <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-6">
-        Tu espacio,
-        <br />
-        <span className="text-primary">verdaderamente</span>
-        <br />
-        inteligente.
-      </h1>
+<h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-6">
+  Soluciones tecnológicas
+  <br />
+  <span className="text-primary">integrales</span>
+  <br />
+  para cada espacio.
+</h1>
 
-      <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-8 max-w-2xl">
-        Automatización, seguridad y eficiencia energética para hogares,
-        comercios y empresas.
-      </p>
-      <p className="mt-4 text-sm md:text-base text-cyan-300 font-semibold tracking-wide">
-           Para hogares • Constructoras • Hoteles • Oficinas • Comercios
-      </p>
+<p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+  Integramos soporte informático, redes, seguridad, domótica y
+  automatización para hogares, comercios y empresas.
+</p>
+
+<p className="mt-4 text-sm md:text-base text-cyan-300 font-semibold tracking-wide">
+  Una sola empresa para todas tus necesidades tecnológicas
+</p>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
-        {[
-          "Iluminación",
-          "Climatización",
-          "Seguridad",
-          "Ahorro",
-          "Control total",
-        ].map((item) => (
+       {[
+  "Soporte IT",
+  "Redes y WiFi",
+  "Seguridad",
+  "Domótica",
+  "Automatización",
+].map((item) => (
           <div
             key={item}
             className="rounded-2xl border border-primary/20 bg-white/5 backdrop-blur-md px-4 py-4 text-center text-white/90 shadow-lg"
@@ -238,7 +305,7 @@ export default function Home() {
 
       <div className="flex flex-col sm:flex-row gap-4">
         <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg py-7 rounded-xl gap-2 shadow-xl shadow-primary/30" onClick={() => window.open("https://wa.me/543442405219", "_blank")}>
-          Hablemos de tu proyecto
+          Solicitar asesoramiento
           <ArrowRight className="w-5 h-5" />
         </Button>
 
@@ -638,7 +705,7 @@ export default function Home() {
             Solicitá una asesoría inicial y descubrí qué soluciones inteligentes podés implementar en tu espacio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2" onClick={() => window.open('https://wa.me/543442405219', "_blank")}>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white gap-2" onClick={() => window.open("https://wa.me/543442405219?text=Hola%2C%20quiero%20recibir%20asesoramiento%20sobre%20las%20soluciones%20de%20Enerbyte","_blank")}>
               Solicitar asesoramiento por WhatsApp
               <ArrowRight className="w-4 h-4" />
             </Button>
