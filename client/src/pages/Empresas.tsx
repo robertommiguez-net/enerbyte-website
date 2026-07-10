@@ -253,7 +253,7 @@ export default function Empresas() {
 
               <div className="mt-12 grid max-w-3xl gap-3 sm:grid-cols-3">
                 {[
-                  "Más de 8 años de experiencia",
+                  "Más de 15 años de experiencia",
                   "Atención remota y presencial",
                   "Soluciones a medida",
                 ].map((item) => (
