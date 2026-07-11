@@ -48,7 +48,7 @@ export default function WelcomePopup() {
 
       <div className="fixed inset-0 z-50 flex items-center justify-center p-5">
 
-        <div className="relative w-full max-w-5xl overflow-visible">
+        <div className="relative w-full max-w-5xl overflow-visible transform scale-[0.70] origin-center animate-in zoom-in-95 fade-in duration-500">
 
     <button
   onClick={close}
