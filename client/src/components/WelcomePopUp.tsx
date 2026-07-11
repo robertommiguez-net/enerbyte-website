@@ -58,7 +58,7 @@ export default function WelcomePopup() {
             relative
             w-full
             max-w-5xl
-            scale-75
+            scale-60
             origin-center
             overflow-visible
             animate-in
