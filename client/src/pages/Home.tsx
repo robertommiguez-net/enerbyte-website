@@ -7,6 +7,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronDown, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import WelcomePopup from "@/components/WelcomePopup";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -71,6 +72,7 @@ export default function Home() {
 ];
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
+      <WelcomePopup />
       {/* Header/Navigation */}
       <header className="fixed top-0 w-full z-[9999] bg-background/80 backdrop-blur-md border-b border-border transition-all duration-300">
         <div className="container flex items-center justify-between h-16 md:h-20">
