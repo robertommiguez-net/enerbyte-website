@@ -7,7 +7,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronDown, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import WelcomePopup from "@/components/WelcomePopup";
+import WelcomePopup from "@/components/WelcomePopUp";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
