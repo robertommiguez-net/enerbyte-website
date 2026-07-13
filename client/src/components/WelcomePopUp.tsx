@@ -3,6 +3,15 @@ import { X } from "lucide-react";
 
 const STORAGE_KEY = "enerbyte-popup";
 
+const trackWhatsappClick = () => {
+  if (typeof window !== "undefined" && "gtag" in window) {
+    window.gtag("event", "click_whatsapp_popup", {
+      event_category: "conversion",
+      event_label: "Popup enchufe inteligente",
+    });
+  }
+};
+
 export default function WelcomePopup() {
   const [show, setShow] = useState(false);
 
@@ -111,6 +120,7 @@ export default function WelcomePopup() {
           target="_blank"
           rel="noopener noreferrer"
           className="block"
+          onClick={trackWhatsappClick}
         >
           <img
             src="/images/popup1welcome.webp"
