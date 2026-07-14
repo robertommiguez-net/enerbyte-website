@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ChevronDown, Lock, Leaf, Smartphone, Cog, ArrowRight, ShoppingBag, House, Zap, Shield, Lightbulb, Camera, DoorOpen, CheckCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import WelcomePopup from "@/components/WelcomePopUp";
+import SolutionPaths from "@/components/home/SolutionPaths";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -318,6 +319,8 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+      <SolutionPaths />
 
       {/* Differential Section */}
       <section id="nosotros" className="py-20 md:py-32 bg-secondary/30 border-t border-accent/20">
