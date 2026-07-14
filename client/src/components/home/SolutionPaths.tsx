@@ -1,134 +1,106 @@
-import { ArrowRight, Building2, HardHat, House, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  HardHat,
+  House,
+  Zap,
+} from "lucide-react";
 
-const options = [
+const WHATSAPP_URL =
+  "https://wa.me/543442405219?text=Hola%20Enerbyte%2C%20quiero%20asesoramiento%20para%20ahorrar%20energ%C3%ADa.";
+
+const solutions = [
   {
-    title: "Quiero automatizar mi hogar",
+    title: "Automatizar mi hogar",
     description:
-      "Luces, enchufes, climatización, cámaras y rutinas inteligentes para vivir con más comodidad.",
+      "Iluminación, enchufes, climatización, seguridad y rutinas inteligentes.",
+    action: "Ver soluciones para el hogar",
+    href: "#soluciones",
     icon: House,
-    href: "#tienda",
-    cta: "Ver soluciones para el hogar",
-    accent: "from-blue-500/25 to-cyan-400/5",
   },
   {
-    title: "Quiero mejorar mi empresa",
+    title: "Mejorar mi empresa",
     description:
-      "Soporte IT, redes, seguridad, respaldo y automatización con una única atención tecnológica.",
-    icon: Building2,
+      "Soporte IT, redes, respaldo, seguridad y automatización para trabajar sin interrupciones.",
+    action: "Conocer Enerbyte Empresas",
     href: "/empresas",
-    cta: "Conocer Enerbyte Empresas",
-    accent: "from-cyan-500/25 to-blue-500/5",
+    icon: Building2,
   },
   {
-    title: "Estoy construyendo",
+    title: "Soluciones para mi obra",
     description:
-      "Integramos tecnología y domótica desde el proyecto para sumar valor a cada unidad y desarrollo.",
-    icon: HardHat,
+      "Tecnología y automatización integradas desde la etapa de planificación.",
+    action: "Ver soluciones para constructoras",
     href: "/constructoras",
-    cta: "Ver soluciones para constructoras",
-    accent: "from-indigo-500/25 to-blue-500/5",
+    icon: HardHat,
   },
   {
-    title: "Quiero ahorrar energía",
+    title: "Ahorrar energía",
     description:
-      "Controlá consumos, programá equipos y evitá gastos innecesarios con automatizaciones simples.",
-    icon: Zap,
-    href: "https://wa.me/543442405219?text=Hola%20Enerbyte,%20quiero%20asesoramiento%20para%20ahorrar%20energ%C3%ADa%20con%20automatizaci%C3%B3n.",
-    cta: "Recibir asesoramiento",
-    accent: "from-emerald-500/20 to-cyan-500/5",
+      "Controlá consumos, programá equipos y evitá gastos innecesarios.",
+    action: "Recibir asesoramiento",
+    href: WHATSAPP_URL,
     external: true,
+    icon: Zap,
   },
 ];
 
-function trackSelection(title: string) {
-  if (typeof window !== "undefined" && "gtag" in window) {
-    window.gtag("event", "select_solution_path", {
-      event_category: "navigation",
-      event_label: title,
-    });
-  }
-}
-
 export default function SolutionPaths() {
   return (
-    <section
-      id="que-queres-resolver"
-      className="relative border-y border-accent/15 bg-[#060b1b] py-20 md:py-28"
-    >
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-28 top-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
-      </div>
+    <section className="relative overflow-hidden border-t border-border bg-secondary/20 py-20 md:py-28">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
 
-      <div className="container relative z-10">
-        <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-          <span className="mb-4 inline-flex rounded-full border border-cyan-400/25 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
+      <div className="container relative">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-accent">
             Empezá por tu necesidad
-          </span>
+          </p>
 
-          <h2 className="text-3xl font-bold text-white md:text-5xl">
-            ¿Qué querés resolver?
+          <h2 className="text-3xl font-bold md:text-5xl">
+            ¿Qué querés <span className="text-accent">resolver?</span>
           </h2>
 
-          <p className="mt-5 text-lg leading-relaxed text-white/65">
-            Elegí el camino que más se parece a tu proyecto. Nosotros te guiamos
-            desde la primera consulta hasta la instalación y el soporte.
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+            Elegí el camino que mejor representa tu proyecto y encontrá una
+            solución pensada para vos.
           </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {options.map((option) => {
-            const Icon = option.icon;
+          {solutions.map((solution) => {
+            const Icon = solution.icon;
 
             return (
               <a
-                key={option.title}
-                href={option.href}
-                target={option.external ? "_blank" : undefined}
-                rel={option.external ? "noopener noreferrer" : undefined}
-                onClick={() => trackSelection(option.title)}
-                className="group relative flex min-h-[320px] flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-7 shadow-xl backdrop-blur-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-400/45 hover:bg-white/[0.07]"
+                key={solution.title}
+                href={solution.href}
+                target={solution.external ? "_blank" : undefined}
+                rel={solution.external ? "noopener noreferrer" : undefined}
+                className="group flex min-h-[310px] flex-col rounded-3xl border border-border bg-background/70 p-7 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10"
               >
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${option.accent} opacity-70 transition duration-300 group-hover:opacity-100`}
-                />
-
-                <div className="relative z-10 flex h-full flex-col">
-                  <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/15 bg-black/25 text-cyan-300 shadow-lg transition duration-300 group-hover:scale-110 group-hover:border-cyan-300/50">
-                    <Icon className="h-7 w-7" />
-                  </div>
-
-                  <h3 className="text-2xl font-bold leading-tight text-white">
-                    {option.title}
-                  </h3>
-
-                  <p className="mt-4 flex-1 leading-relaxed text-white/65">
-                    {option.description}
-                  </p>
-
-                  <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-cyan-300">
-                    {option.cta}
-                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </div>
+                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-primary/25 bg-primary/10 text-primary transition duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                  <Icon className="h-7 w-7" />
                 </div>
+
+                <h3 className="text-2xl font-bold leading-tight">
+                  {solution.title}
+                </h3>
+
+                <p className="mt-4 flex-1 leading-relaxed text-muted-foreground">
+                  {solution.description}
+                </p>
+
+                <span className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-accent">
+                  {solution.action}
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
               </a>
             );
           })}
         </div>
 
-        <div className="mt-10 text-center">
-          <p className="text-sm text-white/50">
-            ¿No sabés cuál elegir? Te asesoramos sin costo y sin compromiso.
-          </p>
-          <a
-            href="https://wa.me/543442405219?text=Hola%20Enerbyte,%20no%20s%C3%A9%20por%20d%C3%B3nde%20empezar%20y%20quiero%20asesoramiento."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-semibold text-white shadow-lg shadow-primary/20 transition hover:bg-primary/90"
-          >
-            Contanos qué necesitás
-            <ArrowRight className="h-4 w-4" />
-          </a>
+        <div className="mt-10 text-center text-sm text-muted-foreground">
+          ¿No sabés cuál elegir? Te asesoramos sin cargo por WhatsApp.
         </div>
       </div>
     </section>
